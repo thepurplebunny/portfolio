@@ -1,0 +1,203 @@
+.chaparral-light() {
+    font-family: "chaparral-pro", sans-serif;
+    font-weight: 300;
+}
+
+.chaparral-regular() {
+    font-family: "chaparral-pro", sans-serif;
+    font-weight: 400;
+}
+
+.chaparral-bold() {
+    font-family: "chaparral-pro", sans-serif;
+    font-weight: 600;
+}
+
+
+.meta-light() {
+    font-family: "ff-meta-web-pro", sans-serif;
+    font-weight: 300;
+}
+
+.meta-regular() {
+    font-family: "ff-meta-web-pro", sans-serif;
+    font-weight: 400;
+}
+
+.meta-bold() {
+    font-family: "ff-meta-web-pro", sans-serif;
+    font-weight: 600;
+}
+
+
+body {
+    .chaparral-regular();
+    color: white;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 400;
+    margin: inherit;
+}
+
+
+.title {
+    font-size: 2.3rem;
+    .chaparral-light();
+    color: white;
+}
+
+
+footer {
+    color: #d5d5d5;
+}
+
+
+/* BUTTONS */
+
+.button() {
+    .meta-bold();
+    display: block;
+
+    height: 3.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.15rem;
+    border-radius: 5px;
+    line-height: 3.5rem;
+    width: 224px;
+    border: 2px solid white;
+    color: white;
+
+    i {
+        margin-left: 1rem;
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+}
+
+.button.light {
+    .button();
+    border: 2px solid white;
+    color: white;
+}
+
+.button.dark {
+    .button();
+    border: 2px solid #4a535f;
+    color: #4a535f;
+}
+
+.button.half {
+    width: 47%;
+    display: inline-block;
+    margin: 0.25rem;
+}
+
+
+// main homepage 
+
+ main {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+ }
+
+ .slogan {
+   .chaparral-light();
+   font-size: 2.1rem;
+   line-height: 1.2;
+   strong {
+       font-weight: 600;
+       text-transform: uppercase;
+       color: #ffea00;
+       font-size: 2.5rem;
+       display: block;
+       line-height: 4.3rem;
+       margin-bottom: -13px;
+       margin-top: -7px;
+    }
+    span {
+        font-size: 1.9rem;
+        line-height: 1.8rem;
+        display: block;
+        
+    }
+
+    i {
+        font-size: 2.3rem;
+        line-height: 2.5rem;
+    }
+ }   
+
+
+ // Latest work
+
+.latest-work {
+ background: #42c1b0;
+ }
+
+
+ // carousel
+ .slider .item img{
+   display: block;
+   height: 100%;
+   margin: 0 auto;
+   max-width: 100%;
+ }
+
+
+
+ // contact and social 
+
+ .social {
+    padding: 0;
+        .link {
+            display: inline-block;
+            margin-right:1rem;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        
+    }
+ }
+
+
+ // Footer 
+
+ footer {
+    .meta-bold();
+    font-size: 1.25rem;
+
+ }
+
+
+
+ // NAV
+
+nav {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: black;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    z-index: 11;
+    -webkit-transition: -webkit-transform 0.5s;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+
+    &.show {
+        -webkit-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+    }
+
+    .menu-trigger {
+        float: right;
+        position: relative;
+        right: 0;
+    }
+}

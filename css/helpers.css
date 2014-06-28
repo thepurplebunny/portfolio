@@ -36,6 +36,12 @@ a:hover {
     color: #FFF;
 }
 
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 /*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
  */
@@ -208,4 +214,10 @@ textarea[contenteditable] {
     content: "--------";
     letter-spacing: -1px;
     margin-left: 10px;
+ }
+
+
+ .no-scroll {
+    overflow: hidden;
+    z-index: 1;
  }

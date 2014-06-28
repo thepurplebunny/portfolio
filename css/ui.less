@@ -1,3 +1,18 @@
+// retina.less
+// A helper mixin for applying high-resolution background images (http://www.retinajs.com)
+
+@highdpi: ~"(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx)";
+
+.at2x(@path, @orientation) {
+  background: url(@path) no-repeat @orientation;
+  @at2x_path: ~`@{path}.replace(/\.\w+$/, function(match) { return "@2x" + match; })`;
+
+  @media @highdpi {
+    background: url("@{at2x_path}") no-repeat @orientation;
+    background-size: cover;
+  }
+}
+
 .chaparral-light() {
     font-family: "chaparral-pro", sans-serif;
     font-weight: 300;
@@ -45,6 +60,30 @@ h1, h2, h3, h4, h5 {
     font-size: 2.3rem;
     .chaparral-light();
     color: white;
+}
+
+.title-dark {
+    color: #640ea0;
+    font-size: 2.3rem;
+    .chaparral-light();
+}
+
+.text {
+    .meta-regular();
+    font-size: 1rem;
+    color: #4a535f;
+}
+
+.contact-link, .contact-link:visited  {
+    text-decoration: underline;
+    color: #640ea0;
+}
+
+.dribbble-link {
+    text-decoration: underline;
+    color: #ea4c89;
+    
+
 }
 
 
@@ -174,30 +213,99 @@ footer {
 
  }
 
-
-
  // NAV
 
 nav {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    background: black;
-    position: absolute;
+    
+    width: 100vw;
+    background: #1f2328;
+    position:fixed;
     height: 100vh;
     top: 0;
-    z-index: 11;
-    -webkit-transition: -webkit-transform 0.5s;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-
-    &.show {
-        -webkit-transform: translate3d(0%, 0, 0);
-        transform: translate3d(0%, 0, 0);
-    }
+    z-index: 999;
+    
 
     .menu-trigger {
         float: right;
         position: relative;
-        right: 0;
+        
+        font-size: 2rem;
     }
+
+}
+    
+.nav-list-container {
+    padding: 3.5rem 6.5rem 2rem;
+    border-bottom: 1px solid #2a3037;
+}
+
+.nav-list {
+    
+    padding: 0;
+}
+
+.nav-link {
+    .meta-regular();
+    font-size: 1.35rem;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 2.89rem;
+    
+    &.active, &:hover {
+        .fa-circle { 
+            color: #b39aee;
+        }
+    }
+
+    .fa-circle {
+        font-size: 0.88rem;
+        vertical-align: middle;
+        margin-left: 8px;
+        margin-top: -3px;
+        color: #1f2328;
+    }
+}
+
+.dribbble-feed {
+    padding: 2rem 6.5rem;
+    height: 20rem;
+
+    h3 {
+        .chaparral-regular();
+        color: #fff;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+
+        i {
+           color: #d3477e;
+           margin-left: 36px;
+           font-size: 1.8rem;
+        }
+    }
+}
+
+.social.mini {
+    width: 86%;
+    padding: 0.5rem 0 1.2rem;
+    text-align: center;
+}
+
+.social.mini img {
+    height: 17px;
+}
+
+.social.mini .link {
+    margin-right: 1.75rem;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.social-container .mailto {
+    .meta-bold();
+    font-size: 1.1rem;
+    font-style: italic;
+    display: block;
+    text-align: center;
+    color: #4a535f;
 }

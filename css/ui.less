@@ -309,3 +309,30 @@ nav {
     text-align: center;
     color: #4a535f;
 }
+
+
+
+// Project navigation
+
+.projects-navigation {
+    text-align: center;
+    margin-bottom: 2rem;
+    li {
+        font-size: 3rem;
+        display: inline-block;
+        width: 32%;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.grid {
+            font-size: 5.5rem;
+            line-height: 1rem;
+        }
+    }
+    a {
+        color: #4a535f;
+        -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+       -webkit-text-stroke-width: 2px;
+       -webkit-text-stroke-color: #4a535f;
+    }
+}

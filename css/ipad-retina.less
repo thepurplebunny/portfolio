@@ -1,8 +1,305 @@
 @import 'normalize.css';
 @import 'helpers.css';
 @import 'font-awesome.min.css';
+@import 'ui.less';
 
-	main, nav {
-		
-		background: green;
+	html { 
+
+		font-size: 20px;
+		letter-spacing: -0.5px;
 	}
+
+	main {
+		width: 100%;
+		height: 76vh;
+		//background: url(../img/homepage/main-visual.jpg) center center no-repeat;
+		.at2x('../img/homepage/main-visual.jpg', center center);
+		padding: 1em 1.5em;
+	}
+
+	main.portfolio {
+		height: 9vh;
+		background: #640ea0;
+	}
+
+	main, section, footer {
+		-webkit-transition: -webkit-transform 0.5s;
+		-webkit-transform: translate3d(0%, 0, 0);
+		transform: translate3d(0%, 0, 0);
+		&.hide {
+		    -webkit-transform: translate3d(-50%, 0, 0);
+		    transform: translate3d(-50%, 0, 0);
+		    .menu-trigger {
+		    	display: none;
+		    }
+		}
+	}
+
+	@media screen and (orientation: landscape) {
+		main {
+			height: 100vh;
+		}
+
+		main.portfolio {
+			height: 12vh;
+			background: #640ea0;
+		}
+
+		main, section, footer {
+			-webkit-transition: -webkit-transform 0.5s;
+			-webkit-transform: translate3d(0%, 0, 0);
+			transform: translate3d(0%, 0, 0);
+			&.hide {
+			    -webkit-transform: translate3d(-50%, 0, 0);
+			    transform: translate3d(-50%, 0, 0);
+
+			    .menu-trigger {
+			    	display: none;
+			    }
+			}
+		}
+	}
+
+	header {
+		
+		a {
+			float: left;
+		}
+
+		span {
+			float: right;
+		}
+	}
+
+	.logo	{
+		width: 272px;
+	}
+
+	.menu-trigger .fa-bars {
+		font-size: 34px;
+		line-height: 48px;
+		text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+	}
+
+
+	nav {
+		-webkit-transition: -webkit-transform 0.5s;
+		-webkit-transform: translate3d(200%, 0, 0);
+		transform: translate3d(200%, 0, 0);
+		width: 50vw;
+
+		&.show {
+		    -webkit-transform: translate3d(100%, 0, 0);
+		    transform: translate3d(100%, 0, 0);
+		}
+
+		.menu-trigger {
+			right: 7%;
+			top: 20px;
+		}
+
+		.nav-list-container {
+			padding: 3.5rem 4.5rem 2rem;
+		}
+
+		.dribbble-feed {
+		    padding: 2rem 2rem 2rem 4.5rem;
+		    height: 20rem;
+
+		}
+
+		.social.mini .link {
+			margin-right: 1.5rem;
+		}
+	}
+
+	@media screen and (orientation: landscape) { 
+		nav {
+			-webkit-transition: -webkit-transform 0.5s;
+			-webkit-transform: translate3d(200%, 0, 0);
+			transform: translate3d(200%, 0, 0);
+
+			&.show {
+			    -webkit-transform: translate3d(100%, 0, 0);
+			    transform: translate3d(100%, 0, 0);
+			}
+			
+			.menu-trigger {
+				right: 5%;
+				top: 20px;
+			}
+
+			.nav-list-container {
+				padding: 3.5rem 4.5rem 2rem;
+			}
+
+			.dribbble-feed {
+			    padding: 2rem 2rem 2rem 4.5rem;
+			    height: 18rem;
+
+			}
+		
+			.social.mini .link {
+				margin-right: 1.5rem;
+			}
+
+
+		}
+	}
+
+
+	.slogan-container {
+		height: 50vh;
+	}
+
+	@media screen and (orientation: landscape) {
+		.slogan-container {
+			height: 75vh;
+		}
+	}
+
+	.slogan {
+		padding: 1em 0;
+		vertical-align: middle;
+		display: inline-block;
+
+		.chaparral-light();
+		font-size: inherit;
+		line-height: inherit;
+		strong {
+		   
+		    font-size: 3.5rem;
+		    
+		    line-height: 5.3rem;
+		    margin-bottom: -21px;
+		    margin-top: -7px;
+		 }
+		 span {
+		     font-size: 2.9rem;
+		     line-height: 2.8rem;
+		    
+		     
+		 }
+
+		 i {
+		     font-size: 3.3rem;
+		     line-height: 3.5rem;
+		 }
+
+	}
+
+
+	  
+	 
+
+
+	.button {
+		width: 35%;
+	}
+	
+	@media screen and (orientation: landscape) {
+		.button {
+			width: 35% !important;
+		}
+
+
+	}
+
+
+	// Latest Work
+
+	.latest-work {
+		padding: 2rem 1.5rem;
+
+		.title {
+			margin-bottom: 1.5rem;
+		}
+
+		.slider {
+			margin-bottom: 1rem;
+
+			.item{
+			   height: 30vh;
+			}
+		}
+
+		.owl-theme .owl-controls .owl-page span {
+			width: 20px;
+			height: 20px;
+		}
+
+
+
+		@media screen and (orientation: landscape) {
+		
+		.latest-work {
+			height: 100vh;
+		}
+
+			.slider {
+				height: 67vh;
+				.item {
+				   height: 55vh;
+				}
+			}
+		}
+	}
+
+
+	
+	// Portfolio
+
+	section.portfolio {
+		padding: 2rem 1.5rem;
+
+		.title-dark {
+			margin-bottom: 1rem;
+		}
+
+		.text {
+			padding:0 1rem;
+		}
+
+		.projects-list li {
+			margin-bottom: 2rem;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		li img {
+			max-width: 100%;
+		}
+
+		.grid {
+			@media (orientation: portrait) {
+			    width: 13%;
+			}
+		}
+
+		
+
+
+
+		@media screen and (orientation: landscape) {
+			
+		}
+
+
+	}
+
+
+	
+	
+
+
+	// Contact us
+
+	.contact {
+		padding: 2rem 1.5rem 0rem 1.5rem;
+	}
+
+	footer {
+		margin: 2rem 0rem;
+	}
+

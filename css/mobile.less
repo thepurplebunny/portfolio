@@ -2,6 +2,13 @@
 @import 'helpers.css';
 @import 'font-awesome.min.css';
 @import 'ui.less';
+#viewport {
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: black;
+	z-index: 999;
+}
 
 	html { 
 
@@ -12,6 +19,7 @@
 	main {
 		width: 100%;
 		height: 76vh;
+		height: 400px;
 		//background: url(../img/homepage/main-visual.jpg) center center no-repeat;
 		.at2x('../img/homepage/main-visual.jpg', center center);
 		padding: 1em 1.5em;
@@ -19,6 +27,7 @@
 
 	main.portfolio {
 		height: 10vh;
+		height: 50px;
 		background: #640ea0;
 	}
 
@@ -35,6 +44,7 @@
 	@media screen and (orientation: landscape) {
 		main {
 			height: 150vh;
+			height: 400px;
 		}
 
 		main.portfolio {
@@ -188,8 +198,24 @@
 			padding:0 1rem;
 		}
 
-		.projects-list li {
+		.projects-list {
+				li {
+					margin-bottom: 2rem;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+				img {
+					max-width: 100%;
+					&:last-child {
+						margin-bottom: 0;
+				}
+			}
+		}
+
+		.project-list img {
 			margin-bottom: 2rem;
+			max-width: 100%;
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -200,16 +226,12 @@
 		        }
 
 		li img {
-			max-width: 100%;
+			
 		}
 		
 
 
-		@media screen and (orientation: landscape) {
-			.grid {
-			            width: 13%;
-			        }
-		}
+		
 	}
 
 	.projects-navigation {
@@ -229,6 +251,11 @@
 	            line-height: 1rem;
 	            text-align: center;
 	            
+	        }
+	        @media screen and (orientation: landscape) {
+	        	.grid {
+	        	            width: 13%;
+	        	        }
 	        }
 	    }
 	    a {

@@ -47,9 +47,8 @@
         <!-- Iphone and smartphones -->
         <link rel="stylesheet" media="screen and (min-device-width: 320px) and (max-device-width: 660px)" href="css/mobile.css",>
         <!-- Ipad Retina -->
-        <link rel="stylesheet" media="screen and (min-device-width: 768px) and (max-device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" href="css/ipad-retina.css",>
-        <!-- Ipad Normal -->
-        <link rel="stylesheet" media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1)" href="css/ipad-normal.css",>
+        <link rel="stylesheet" media="screen and (min-device-width: 768px) and (max-device-height: 1024px)" href="css/ipad-retina.css",>
+       
         <!-- Desktop -->
         <link rel="stylesheet" media="screen and (min-width: 1280px)" href="css/desktop.css",>
 
@@ -59,7 +58,6 @@
         <script src="js/vendor/modernizr-2.7.1.min.js"></script>
     </head>
     <body>
-
         <main>
             <header class="clearfix">
                 <a href="/"><img class="logo" src="img/homepage/logo.svg" alt="The purple bunny"></a>
@@ -130,6 +128,18 @@
         
         <script src="js/helper.js"></script>
         <script src="js/main.js"></script>
+        <script>
+        $(document).ready(function(e) {
+                     showViewportSize();    
+                  });
+                  $(window).resize(function(e) {
+                     showViewportSize();
+                  });
+                  function showViewportSize() {
+                     var the_width = $(window).width();
+                     var the_height = $(window).height();                   
+                     $('#viewport').text(the_width+ "x" +the_height);
+                  }</script>
 
         
     </body>

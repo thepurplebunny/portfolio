@@ -10,21 +10,16 @@
 
 /* Styling Next and Prev buttons */
 
-.owl-theme .owl-controls .owl-buttons div{
-	color: #FFF;
-	display: inline-block;
-	zoom: 1;
-	*display: inline;/*IE7 life-saver */
-	margin: 5px;
-	padding: 3px 10px;
-	font-size: 12px;
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
-	border-radius: 30px;
-	background: #869791;
-	filter: Alpha(Opacity=50);/*IE7 fix*/
-	opacity: 0.5;
+.owl-theme .owl-controls .owl-buttons div:hover{
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
 }
+
+
+
+
+
+
 /* Clickable class fix problem with hover on touch devices */
 /* Use it for non-touch hover action */
 .owl-theme .owl-controls.clickable .owl-buttons div:hover{
@@ -50,7 +45,10 @@
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
-	background: #869791;
+	background: #fff;
+	-webkit-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+	
 }
 
 .owl-theme .owl-controls .owl-page.active span,
@@ -59,6 +57,10 @@
 	opacity: 1;
 }
 
+.owl-theme .owl-controls .owl-page.active span {
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
 /* If PaginationNumbers is true */
 
 .owl-theme .owl-controls .owl-page span.owl-numbers{

@@ -7,7 +7,7 @@ $(document).ready(function() {
     items : 3,
     singleItem: true,
     lazyLoad : true,
-    navigation : false,
+    navigation : true,
     addClassActive: true,
     afterAction : afterAction
   }); 

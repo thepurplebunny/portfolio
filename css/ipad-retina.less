@@ -16,7 +16,12 @@
 
 		font-size: 20px;
 		letter-spacing: -0.5px;
+		@media screen and (orientation: landscape ) {
+			font-size: 18px;
+		}
 	}
+
+
 
 	main {
 		width: 100%;
@@ -122,7 +127,7 @@
 		}
 
 		.social.mini .link {
-			margin-right: 1.5rem;
+			margin-right: 0.7rem;
 		}
 	}
 
@@ -132,9 +137,11 @@
 			-webkit-transform: translate3d(200%, 0, 0);
 			transform: translate3d(200%, 0, 0);
 
+
 			&.show {
 			    -webkit-transform: translate3d(100%, 0, 0);
 			    transform: translate3d(100%, 0, 0);
+
 			}
 			
 			.menu-trigger {
@@ -143,7 +150,7 @@
 			}
 
 			.nav-list-container {
-				padding: 3.5rem 4.5rem 2rem;
+				padding: 2.5rem 4.5rem 2rem;
 			}
 
 			.dribbble-feed {
@@ -237,6 +244,10 @@
 			   height: 30vh;
 			   height: 278px;
 			}
+		}
+
+		.owl-buttons {
+			display: none;
 		}
 
 		.owl-theme .owl-controls .owl-page span {

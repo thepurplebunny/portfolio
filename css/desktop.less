@@ -5,62 +5,36 @@
 
 	html { 
 
-		font-size: 20px;
+		font-size: 16px;
 		letter-spacing: -0.5px;
+		overflow-x: hidden;
 	}
 
 	main {
 		width: 100%;
-		height: 76vh;
-		height: 928px;
+		height: 100vh;
 		//background: url(../img/homepage/main-visual.jpg) center center no-repeat;
 		.at2x('../img/homepage/main-visual.jpg', center center);
-		padding: 1em 1.5em;
+		padding: 2em 6em;
+		.button {
+			margin-top: -100px;
+		}
 	}
 
 	main.portfolio {
 		height: 9vh;
-		height: 83px;
 		background: #640ea0;
 	}
 
 	main, section, footer {
-		-webkit-transition: -webkit-transform 0.5s;
-		-webkit-transform: translate3d(0%, 0, 0);
-		transform: translate3d(0%, 0, 0);
+		right: 0px;
+		position: relative;
+		transition: right 0.5s ease;
 		&.hide {
-		    -webkit-transform: translate3d(-50%, 0, 0);
-		    transform: translate3d(-50%, 0, 0);
+		   right: 273px;
 		    .menu-trigger {
 		    	display: none;
 		    }
-		}
-	}
-
-	@media screen and (orientation: landscape) {
-		main {
-			height: 100vh;
-			height: 692px;
-		}
-
-		main.portfolio {
-			height: 12vh;
-			height: 83px;
-			background: #640ea0;
-		}
-
-		main, section, footer {
-			-webkit-transition: -webkit-transform 0.5s;
-			-webkit-transform: translate3d(0%, 0, 0);
-			transform: translate3d(0%, 0, 0);
-			&.hide {
-			    -webkit-transform: translate3d(-50%, 0, 0);
-			    transform: translate3d(-50%, 0, 0);
-
-			    .menu-trigger {
-			    	display: none;
-			    }
-			}
 		}
 	}
 
@@ -76,120 +50,95 @@
 	}
 
 	.logo	{
-		width: 272px;
+		width: 180px;
 	}
 
 	.menu-trigger .fa-bars {
-		font-size: 34px;
-		line-height: 48px;
+		font-size: 22px;
+		line-height: 33px;
 		text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+		cursor: pointer;
 	}
 
 
 	nav {
-		-webkit-transition: -webkit-transform 0.5s;
-		-webkit-transform: translate3d(200%, 0, 0);
-		transform: translate3d(200%, 0, 0);
-		width: 50vw;
+		right: -273px;
+		transition: right 0.5s ease;
+		width: 273px;
 
 		&.show {
-		    -webkit-transform: translate3d(100%, 0, 0);
-		    transform: translate3d(100%, 0, 0);
+		    right: 0px;
+
 		}
 
 		.menu-trigger {
 			right: 7%;
-			top: 20px;
+			top: 7px;
+			font-size: 1.5rem;
+			cursor: pointer;
 		}
 
 		.nav-list-container {
-			padding: 3.5rem 4.5rem 2rem;
+			padding: 3.5rem 2.5rem 2rem;
 		}
 
 		.dribbble-feed {
-		    padding: 2rem 2rem 2rem 4.5rem;
+		    padding: 2rem 2rem 2rem 2.5rem;
 		    height: 20rem;
 
 		}
 
 		.social.mini .link {
-			margin-right: 1.5rem;
+			margin-right: 0.7rem;
+			img {
+				height: 14px;
+			}
 		}
 	}
 
-	@media screen and (orientation: landscape) { 
-		nav {
-			-webkit-transition: -webkit-transform 0.5s;
-			-webkit-transform: translate3d(200%, 0, 0);
-			transform: translate3d(200%, 0, 0);
-
-			&.show {
-			    -webkit-transform: translate3d(100%, 0, 0);
-			    transform: translate3d(100%, 0, 0);
-			}
-			
-			.menu-trigger {
-				right: 5%;
-				top: 20px;
-			}
-
-			.nav-list-container {
-				padding: 3.5rem 4.5rem 2rem;
-			}
-
-			.dribbble-feed {
-			    padding: 2rem 2rem 2rem 4.5rem;
-			    height: 18rem;
-
-			}
-		
-			.social.mini .link {
-				margin-right: 1.5rem;
-			}
-
-
-		}
-	}
+	
 
 
 	.slogan-container {
-		height: 50vh;
-		height: 700px;
+		height: 80vh;
 	}
 
-	@media screen and (orientation: landscape) {
-		.slogan-container {
-			height: 75vh;
-			height: 500px;
-		}
-	}
+	
 
 	.slogan {
 		padding: 1em 0;
 		vertical-align: middle;
 		display: inline-block;
-
+		br {
+			display: none;
+		}
 		.chaparral-light();
 		font-size: inherit;
 		line-height: inherit;
 		strong {
 		   
-		    font-size: 3.5rem;
-		    
-		    line-height: 5.3rem;
+		    font-size: 6rem;
+		    line-height: 7.3rem;
 		    margin-bottom: -21px;
 		    margin-top: -7px;
 		 }
 		 span {
-		     font-size: 2.9rem;
+		     font-size: 3.9rem;
 		     line-height: 2.8rem;
-		    
-		     
+		      display: inline;
+		     &:last-child {
+		     	font-size: 3rem;
+		     }
 		 }
 
 		 i {
-		     font-size: 3.3rem;
-		     line-height: 3.5rem;
+		    font-size: 4.3rem;
+		    line-height: 3.5rem;
+		    &:last-child {
+		    	font-size: 3.5rem;
+		    }
+
+
 		 }
 
 	}
@@ -200,34 +149,30 @@
 
 
 	.button {
-		width: 35%;
+		width: 222px;
 	}
 	
-	@media screen and (orientation: landscape) {
-		.button {
-			width: 35% !important;
-		}
-
-
-	}
-
+	
 
 	// Latest Work
 
 	.latest-work {
 		padding: 2rem 1.5rem;
+		height: 100vh;
 
 		.title {
 			margin-bottom: 1.5rem;
+			font-size: 3.3rem;
 		}
 
 		.slider {
 			margin-bottom: 1rem;
 
 			.item{
-			   height: 30vh;
-			   height: 278px;
+			   height: 55vh;
 			}
+
+
 		}
 
 		.owl-theme .owl-controls .owl-page span {
@@ -235,25 +180,37 @@
 			height: 20px;
 		}
 
+		.owl-prev {
+			position: absolute;
+			left: 0;
+			top: 50%;
 
-
-		@media screen and (orientation: landscape) {
-		
-		.latest-work {
-			height: 100vh;
-			height: 428px;
-
-		}
-
-			.slider {
-				height: 67vh;
-				height: 405px;
-				.item {
-				   height: 55vh;
-				   height: 300px;
-				}
+			
+			&:before {
+				font-family: "FontAwesome";
+				content: "\f104";
+				font-size: 3rem;
+				height: 3rem;
+				line-height: 2.5rem;
 			}
 		}
+
+		.owl-next {
+			position: absolute;
+			right: 0;
+			top: 50%;
+
+			
+			&:before {
+				font-family: "FontAwesome";
+				content: "\f105";
+				font-size: 3rem;
+				height: 2.5rem;
+				line-height: 3rem;
+			}
+		}
+
+
 	}
 
 
@@ -318,10 +275,7 @@
 				height: 31%; 
 				margin: 1%;
 				
-				@media screen and (orientation: landscape) {
-					width: 31%;
-					height: 31%; 
-				}
+		
 
 		}
 
@@ -330,11 +284,7 @@
 			&.half {
 				width: 47.5%;
 				height: 47.5%; 
-				@media screen and (orientation: landscape) {
-					width: 47.75%;
-					height: 47.75%; 
-				}
-
+			
 			}
 
 			&.margin-left {
@@ -353,19 +303,8 @@
 		}
 
 		.grid {
-			@media (orientation: portrait) {
-			    width: 13%;
-			}
-		}
-
-		
-
-
-
-		@media screen and (orientation: landscape) {
 			
 		}
-
 
 	}
 

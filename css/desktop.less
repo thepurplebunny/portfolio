@@ -23,6 +23,7 @@
 
 	main.portfolio {
 		height: 9vh;
+		padding: 1rem 2rem;
 		background: #640ea0;
 	}
 
@@ -73,7 +74,7 @@
 
 		.menu-trigger {
 			right: 7%;
-			top: 7px;
+			top: 15px;
 			font-size: 1.5rem;
 			cursor: pointer;
 		}
@@ -243,9 +244,12 @@
 			    -ms-flex-wrap: wrap;
 			        flex-wrap: wrap;
 			-webkit-box-pack: start;
-			-webkit-justify-content: flex-start;
-			    -ms-flex-pack: start;
-			        justify-content: flex-start;
+			-webkit-justify-content: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			        justify-content: center;
+			        max-width: 990px;
+			        margin: 0 auto;
 		}
 
 
@@ -274,6 +278,12 @@
 				width: 31%;
 				height: 31%; 
 				margin: 1%;
+
+				img {
+					max-width: 100%;
+					/* display: inline-block; */
+					width: 100%;
+				}
 				
 		
 
@@ -281,10 +291,23 @@
 
 		.project-list img {
 			margin-bottom: 2rem;
+			max-height: 100%;
+			/* display: inline-block; */
+			height: 100%;
 			&.half {
 				width: 47.5%;
 				height: 47.5%; 
 			
+			}
+
+			&.third {
+				width: 32%;
+				height: 32%;
+			}
+
+			&.third.middle {
+				margin-left: 1.75%;
+				margin-right: 1.75%;
 			}
 
 			&.margin-left {
@@ -297,10 +320,7 @@
 
 		}
 
-		img {
-			max-width: 100%;
-			width: auto;
-		}
+		
 
 		.grid {
 			

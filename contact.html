@@ -186,13 +186,10 @@
         
         <script>
             // Form Validation
-
+            $("div.submit").addClass("disabled");
+            $("input.submit").attr("disabled", "disabled");
+            
             function enableSubmit() {
-                // if ( $("form").find(".error") ) {
-                //     $("div.submit").addClass("disabled");
-                //     $("input.submit").attr("disabled", "disabled");
-                   
-                // }
 
                 var form = $('form');
                 if ($('.error', form).size()>0) {

@@ -431,7 +431,18 @@ nav {
 
 
 
+// portfolio
+
+.portfolio {
+    .text {
+        margin-bottom: 1rem;
+    }
+}
+
+
 // Project navigation
+
+
 
 .projects-navigation {
     text-align: center;
@@ -484,21 +495,62 @@ nav {
     margin: 0 auto;
     padding-top: 4rem;
     padding-bottom: 1rem;
+
+    .company.field:after {
+        content: '(Optional)';
+        .meta-regular();
+        font-style: italic;
+        font-size: 1rem;
+        position: absolute;
+        top: 20px;
+        color: #999;
+        right: 0;
+    }
     .field {
+        position: relative;
         margin-bottom: 3rem;
         label {
             display: block;
             text-align: left;
             color: #616973;
             font-size: 25px;
-            &.active {
+            .message {
+                display: none;
+                font-size: 1rem;
+                color:#616973;
+                font-style: italic;
+                margin-left: 10px;
+                .meta-regular();
+            }
+            &.focus {
+                color: #a98aeb;
+                path {
+                    fill: #a98aeb;
+                }
+
+
+            }
+
+            &.error {
+                color: red;
+                path {
+                    fill: red;
+                }
+
+                .message {
+                    display: inline-block;
+                    font-size: 1rem;
+                    color: red;
+                    font-style: italic;
+                    margin-left: 10px;
+                    .meta-regular();
+                }
                 
+
             }
         }
 
-        path {
-            fill: red;
-        }
+        
 
         input:not(.submit), textarea {
             width: 100%;
@@ -510,6 +562,7 @@ nav {
             font-size: 1.1rem;
             padding: 0.5rem 0;
             outline: none;
+            
 
         }
 
@@ -519,11 +572,32 @@ nav {
             color: #a98aeb;
             cursor: pointer;
             margin: 0 auto;
+            &.disabled {
+                border: 2px solid #666;
+                background: transparent;
+                color: #666;
+                cursor: default;
+                opacity: 0.7;
+                input {
+                    color: #666 !important;
+                    background: none;
+                }
+                &:hover {
+                    background: none;
+                    color: #666;
+                    input {
+                        color: #666 !important;
+                        background: none;
+                        cursor: default;
+                    }
+                }
+            }
             &:hover {
                 background: #a98aeb;
                 color: white;
                 input {
                     color: white;
+                    background: none;
                 }
             }
             input {
@@ -531,6 +605,7 @@ nav {
                 background: none;
                 text-transform: uppercase;
                 display: inline-block;
+                outline: none;
             }
 
             i {

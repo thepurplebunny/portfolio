@@ -79,6 +79,9 @@
             </div>
             <div class="dribbble-feed">
                 <h3>Dribbble Feed <i class="fa fa-dribbble"></i></h3>
+                <ul id="dribbble">
+                    
+                </ul>
             </div>
             <div class="social-container">
                 <ul class="social mini center">
@@ -124,22 +127,12 @@
 
         <script src="js/vendor/jquery-2.1.0.min.js"></script>
         <script src="js/vendor/owl.carousel.min.js"></script>
+        <script src="js/vendor/jquery.jribbble-1.0.1.ugly.js"></script>
+
         
         <script src="js/helper.js"></script>
         <script src="js/main.js"></script>
-        <script>
-        $(document).ready(function(e) {
-                     showViewportSize();    
-                  });
-                  $(window).resize(function(e) {
-                     showViewportSize();
-                  });
-                  function showViewportSize() {
-                     var the_width = $(window).width();
-                     var the_height = $(window).height();                   
-                     $('#viewport').text(the_width+ "x" +the_height);
-                  }</script>
-
+    
         
     </body>
 </html>

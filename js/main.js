@@ -45,4 +45,24 @@ $(document).ready(function() {
     });
   });
 
+
+    // Dribbble
+
+    var callback = function (playerShots) {
+      var html = '';
+
+      
+
+      $.each(playerShots.shots, function (i, shot) {
+          html += '<li>';
+          html += '<a href="' + shot.url + '" target="_blank">';
+          html += '<img src="' + shot.image_url + '" ';
+          html += 'alt="' + shot.title + '"></a></li>';
+      });
+
+      $('#dribbble').html(html);
+  };
+
+  $.jribbble.getShotsByPlayerId('thepurplebunny', callback, {page: 1, per_page: 6});
+
 });

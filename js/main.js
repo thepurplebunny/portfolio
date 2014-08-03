@@ -1,4 +1,23 @@
-$(document).ready(function() {
+(function(){
+
+  var defaultProject = 'default';
+
+  var mainContainer = $('#portfolio');
+
+  var hash = function(){
+    return window.location.hash.substr(1) || defaultProject;
+  }
+
+  var loadProject = function(){
+    mainContainer.load('projects/'+hash()+'.html').fadeIn(900);
+  }
+
+  $(window).on('hashchange',function(){
+    loadProject();
+  })
+
+  loadProject();
+
   
   var owl = $(".slider");
       
@@ -65,4 +84,9 @@ $(document).ready(function() {
 
   $.jribbble.getShotsByPlayerId('thepurplebunny', callback, {page: 1, per_page: 6});
 
-});
+
+
+
+
+    
+}())

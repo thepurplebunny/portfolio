@@ -37,7 +37,7 @@
         var existing_onload = context.onload || function(){};
 
         context.onload = function() {
-            var images = document.getElementsByClassName('img-retina'), retinaImages = [], i, image;
+            var images = document.getElementsByClassName('retina'), retinaImages = [], i, image;
             for (i = 0; i < images.length; i += 1) {
                 image = images[i];
                 if (!!!image.getAttributeNode('data-no-retina')) {
@@ -61,9 +61,8 @@
 
         return false;
     };
-
-
-    var regexMatch = /\.\w+$/;
+    
+    var regexMatch = /\.[^.]*$/;  
     function suffixReplace (match) {
         return config.retinaImageSuffix + match;
     }

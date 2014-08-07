@@ -28,6 +28,7 @@
     lazyLoad : true,
     navigation : true,
     addClassActive: true,
+    slideSpeed: 500,
     afterAction : afterAction
   }); 
 
@@ -37,6 +38,8 @@
          if (current == 0) {
                 $('.latest-work').css("background", "#42c1b0");
          } else if (current == 1) {
+                $('.latest-work').css("background", "#0571aa");
+         } else if (current == 2) {
                 $('.latest-work').css("background", "#0571aa");
          } else  {
                 $('.latest-work').css("background", "#ee8433");

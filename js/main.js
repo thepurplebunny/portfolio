@@ -1,6 +1,6 @@
 (function(){
 
-  var defaultProject = 'default';
+  var defaultProject = 'portfolio';
 
   var mainContainer = $('#portfolio');
 
@@ -9,7 +9,7 @@
   }
 
   var loadProject = function(){
-    mainContainer.load('projects/'+hash()+'.html').fadeIn(900);
+    mainContainer.load('projects/'+hash()+'.html');
   }
 
   $(window).on('hashchange',function(){
@@ -18,9 +18,9 @@
 
   loadProject();
 
-  
+
   var owl = $(".slider");
-      
+
 
   $(".slider").owlCarousel({
     items : 3,
@@ -32,20 +32,20 @@
     afterAction : afterAction
   }); 
 
-  
-    function afterAction(){
-      var current = this.owl.currentItem;
-         if (current == 0) {
-                $('.latest-work').css("background", "#42c1b0");
-         } else if (current == 1) {
-                $('.latest-work').css("background", "#0571aa");
-         } else if (current == 2) {
-                $('.latest-work').css("background", "#0571aa");
-         } else  {
-                $('.latest-work').css("background", "#ee8433");
-         }
-      }
-      
+
+  function afterAction(){
+    var current = this.owl.currentItem;
+    if (current == 0) {
+      $('.latest-work').css("background", "#f9961e");
+    } else if (current == 1) {
+      $('.latest-work').css("background", "#0571aa");
+    } else if (current == 2) {
+      $('.latest-work').css("background", "#acbe26");
+    } else  {
+      $('.latest-work').css("background", "#42c1b0");
+    }
+  }
+
   // Menu trigger
   $(".menu-trigger").click(function(event) {
   	$("nav").toggleClass('show');
@@ -76,20 +76,20 @@
       
 
       $.each(playerShots.shots, function (i, shot) {
-          html += '<li>';
-          html += '<a href="' + shot.url + '" target="_blank">';
-          html += '<img src="' + shot.image_url + '" ';
-          html += 'alt="' + shot.title + '"></a></li>';
+        html += '<li>';
+        html += '<a href="' + shot.url + '" target="_blank">';
+        html += '<img src="' + shot.image_url + '" ';
+        html += 'alt="' + shot.title + '"></a></li>';
       });
 
       $('#dribbble').html(html);
-  };
+    };
 
-  $.jribbble.getShotsByPlayerId('thepurplebunny', callback, {page: 1, per_page: 6});
+    $.jribbble.getShotsByPlayerId('thepurplebunny', callback, {page: 1, per_page: 6});
 
 
 
 
 
     
-}())
+  }())

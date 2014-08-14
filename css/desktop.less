@@ -69,10 +69,10 @@ main {
 		-ms-transition:.5s;
 		-moz-transition:.5s;
 		-webkit-transition:.5s;
-		opacity: 0.8;
+		
 		&:hover {
 			color: yellow;
-			opacity: 1;
+			
 		}
 	}
 
@@ -96,10 +96,10 @@ main {
 			-ms-transition:.5s;
 			-moz-transition:.5s;
 			-webkit-transition:.5s;
-			opacity: 0.8;
+			
 			&:hover {
 				color: yellow;
-				opacity: 1;
+				
 			}
 		}
 
@@ -530,30 +530,40 @@ main {
 		}		
 
 		.projects-navigation li.grid path {
-			-webkit-transition: all .15s;
-			transition: all 0.45s;
+			-webkit-transition: all .5s;
+			transition: all 0.5s;
+			opacity: 0.8;
 		}
 		.projects-navigation li.grid a:hover path.back {
 			fill: #640ea0;
+			stroke: #640ea0;;
+			opacity: 1;
 		}	
 		.projects-navigation li.grid a:hover path:not(.back) {
 			fill: #fff;
+			opacity: 1;
 		}	
 
 
-		.projects-navigation li a {
+		.projects-navigation li a  {
 			font-size: 3rem;
 			line-height: 3rem;
-			-webkit-transition: all .15s;
-			transition: all 0.15s;
+			i:before {
+				-webkit-transition: all 0.5s;
+				transition: all 0.5s;
+				-webkit-text-fill-color: #fff; 
+				opacity: 0.8;
+			}
 		}
 
-		.projects-navigation li:not(.grid) a:hover  {
-
+		.projects-navigation li:not(.grid) a:hover i:before  {
 			color: #640ea0;
-			-webkit-text-fill-color: #640ea0; /* Will override color (regardless of order) */
-			-webkit-text-stroke-width: 2px;
+			-webkit-text-fill-color: #640ea0;  
+			-webkit-text-stroke-width: 1px;
 			-webkit-text-stroke-color: #640ea0;
+			opacity: 1;
+
+			
 
 		}
 

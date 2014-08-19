@@ -72,13 +72,13 @@
               </div>
               <div class="social-container">
                 <ul class="social mini center">
-                  <li class="link twitter"><img src="img/homepage/footer-icons/twitter.svg" alt=""></li>
-                  <li class="link facebook"><img src="img/homepage/footer-icons/facebook.svg" alt=""></li>
-                  <li class="link behance"><img src="img/homepage/footer-icons/behance.svg" alt=""></li>
-                  <li class="link pinterest"><img src="img/homepage/footer-icons/pinterest.svg" alt=""></li>
-                  <li class="link linkedin"><img src="img/homepage/footer-icons/linkedin.svg" alt=""></li>
-                  <li class="link plus"><img src="img/homepage/footer-icons/googleplus.svg" alt=""></li>
-                  <li class="link instagram"><img src="img/homepage/footer-icons/instagram.svg" alt=""></li>
+                  <li class="link twitter"><a href="http://twitter.com/the_purplebunny"><i class="fa fa-twitter"></i></a></li>
+                    <li class="link facebook"><a href="https://www.facebook.com/purplebunnyfans"><i class="fa fa-facebook"></i></a></li>
+                    <li class="link behance"><a href="http://www.behance.net/thepurplebunny"><i class="fa fa-behance"></i></a></li>
+                    <li class="link pinterest"><a href="http://www.pinterest.com/thepurplebunny/"><i class="fa fa-pinterest"></i></a></li>
+                    <li class="link linkedin"><a href="http://www.linkedin.com/company/the-purple-bunny/"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="link plus"><a href="https://plus.google.com/u/0/104047878482505638243"><i class="fa fa-google-plus"></i></a></li>
+                    <!-- <li class="link instagram"><a href="#"><i class="fa fa-instagram"></i></a></li> -->
                 </ul>
                 <a class="mailto" href="mailto:hello@thepurplebunny.com">hello@thepurplebunny.com</a>
               </div>
@@ -177,12 +177,12 @@
             <span class="fancy-separator"><i>everywhere else</i></span>
             <ul class="social">
               <li class="link twitter"><a href="http://twitter.com/the_purplebunny"><i class="fa fa-twitter"></i></a></li>
-              <li class="link facebook"><a href="https://www.facebook.com/purplebunnyfans"><i class="fa fa-facebook"></i></a></li>
-              <li class="link behance"><a href="http://www.behance.net/thepurplebunny"><i class="fa fa-behance"></i></a></li>
-              <li class="link pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-              <li class="link linkedin"><a href="http://www.linkedin.com/company/the-purple-bunny/"><i class="fa fa-linkedin"></i></a></li>
-              <li class="link plus"><a href="https://plus.google.com/u/0/104047878482505638243"><i class="fa fa-google-plus"></i></a></li>
-              <li class="link instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                          <li class="link facebook"><a href="https://www.facebook.com/purplebunnyfans"><i class="fa fa-facebook"></i></a></li>
+                          <li class="link behance"><a href="http://www.behance.net/thepurplebunny"><i class="fa fa-behance"></i></a></li>
+                          <li class="link pinterest"><a href="http://www.pinterest.com/thepurplebunny/"><i class="fa fa-pinterest"></i></a></li>
+                          <li class="link linkedin"><a href="http://www.linkedin.com/company/the-purple-bunny/"><i class="fa fa-linkedin"></i></a></li>
+                          <li class="link plus"><a href="https://plus.google.com/u/0/104047878482505638243"><i class="fa fa-google-plus"></i></a></li>
+                          <!-- <li class="link instagram"><a href="#"><i class="fa fa-instagram"></i></a></li> -->
             </ul>
           </section>
           <footer class="center-text">
@@ -310,7 +310,7 @@
 
               $("input.captcha").on("focus, focusout", function() {
                  
-                  if ( $(this).val() == '' || $(this).val() != "cat") {
+                  if ( $(this).val() == '' || $(this).val().toLowerCase() != "cat") {
 
                     var hello = "Ups! Maybe you're a robot";
                     $(this).parent().addClass("error");

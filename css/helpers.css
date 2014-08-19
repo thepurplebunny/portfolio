@@ -1,4 +1,6 @@
-/*
+
+
+  /*
  * HTML5 Boilerplate
  *
  * What follows is the result of much research on cross-browser styling.
@@ -195,26 +197,7 @@ they have been set as display: none */
 }
 
 
-.fancy-separator {
-  .chaparral-light();
-  color: #cdcdcd;
-  font-size: 1.5rem;
-  margin: 1.5rem 0rem; 
-  display: block;
-}
 
-.fancy-separator:before {
-  content: "------------------------";
-  letter-spacing: -2px;
-  margin-right: 10px;
-
-}
-
-.fancy-separator:after {
-  content: "------------------------";
-  letter-spacing: -2px;
-  margin-left: 10px;
-}
 
 
 .no-scroll {

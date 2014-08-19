@@ -22,7 +22,7 @@ main {
 	}
 
 	main.portfolio {
-		height: 9vh;
+		height: 66px;
 		padding: 1rem 2rem;
 		background: #640ea0;
 	}
@@ -382,14 +382,14 @@ main {
 			-webkit-justify-content: center;
 			-ms-flex-pack: center;
 			justify-content: center;
+			max-width: 1060px;
+			margin: 0 auto;
 		}
 
 		.projects-list li {
 			margin-bottom: 2rem;
-			
-			width: 24%;
-			height: auto; 
-			margin: 1%;
+			height: auto;
+			margin: 1% 0;
 
 			/*---------------*/
 			/***** Bubba *****/
@@ -583,6 +583,10 @@ main {
 			width: 150px;
 			i {
 				font-weight:normal;
+			}
+			&:hover:not(.disabled) {
+				.animated;
+				.swing;
 			}
 		}
 

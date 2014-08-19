@@ -44,6 +44,27 @@
     font-weight: 600;
 }
 
+.fancy-separator {
+  .chaparral-light();
+  color: #cdcdcd;
+  font-size: 1.5rem;
+  margin: 1.5rem 0rem; 
+  display: block;
+}
+
+.fancy-separator:before {
+  content: "------------------------";
+  letter-spacing: -2px;
+  margin-right: 10px;
+
+}
+
+.fancy-separator:after {
+  content: "------------------------";
+  letter-spacing: -2px;
+  margin-left: 10px;
+}
+
 
 body {
     .chaparral-regular();
@@ -446,25 +467,50 @@ i {
 }
 
 .nav-link {
+    position: relative;
     .meta-bold  ();
     font-size: 1.35rem;
     color: #fff;
     text-transform: uppercase;
     line-height: 2.89rem;
-    
-    &.active, &:hover {
-        .fa-circle { 
-            color: #b39aee;
-        }
-    }
+    padding-left: 1.05rem;
+        
 
-    .fa-circle {
-        font-size: 0.88rem;
-        vertical-align: middle;
-        margin-left: 8px;
-        margin-top: -3px;
-        color: #1f2328;
-    }
+    
+}
+
+.fa-circle {
+    font-size: 0.88rem;
+    vertical-align: middle;
+    position: absolute;
+    color: #b39aee;
+    left: 30px;
+    -webkit-transition: top 0.3s;
+    transition: top 0.3s;
+}
+
+.home-nav-link:hover ~ .fa-circle {
+    top: 73px !important;
+}
+
+.home-nav-link.active ~ .fa-circle {
+    top: 73px;
+}
+
+.contact-nav-link:hover ~ .fa-circle {
+    top: 165px !important;
+}
+
+.contact-nav-link.active ~ .fa-circle {
+    top: 165px;
+}
+
+.portfolio-nav-link:hover ~ .fa-circle {
+    top: 119px !important;
+}
+
+.portfolio-nav-link.active ~ .fa-circle {
+    top: 119px;
 }
 
 .dribbble-feed {
